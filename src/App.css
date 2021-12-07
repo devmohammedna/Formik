@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+  /* width: 50%; */
+  margin: auto;
+  width: 600px;
+}
+.box-date{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.input-full-width > div{
+  width: 100%;
+}
+.box-date > div{
+  width:45%;
+}
+.form {
+  margin: auto;
+}
+
+.label {
+  position: absolute;
+  z-index: 9999;
+  padding: 2px 5px;
+  color: #aaa;
+  font-size: 13px;
+  transition: all 0.2s;
+  visibility: visible;
+  background: white;
+  top: -11px;
+  left: 13px;
+}
+
+input,
+textarea,
+.select__control {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.select__control {
+  padding: 5px;
+  margin: 0;
+}
+input:focus,
+textarea:focus,
+.select__control:focus {
+  border: 2px solid #006aff;
+  outline: none;
+}
+.checkbox > div input {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.checkbox label {
+  font-weight: 600;
+}
+h4 {
+  margin: 10px 0 15px;
+}
+
+.box-salary {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.box-salary > div {
+  width: 28%;
+  height: fit-content;
+}
+textarea {
+  resize: vertical;
+}
+.error,
+.loading,
+.slice,
+.inputError {
+  padding: 15px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: .8rem;
+}
+.error,
+.inputError {
+  color: red;
+}
+.submit,
+.addNew {
+  width: 100px;
+  padding: 10px;
+  background-color: #006aff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.addNew {
+  background-color: transparent;
+  color: #006aff;
+  border: 1px solid #006aff;
+  margin-left: 10px;
+}
+.loading {
+  background-color: #5eba7d;
+}
+.workExperiances {
+  margin-bottom: 50px;
+}
+.slice {
+  color: #333;
+  background-color: #fbf3d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slice > :first-child {
+  width: 45%;
+}
+.slice > :nth-child(2) {
+  width: 30%;
+}
+.slice > :last-child {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slice button {
+  background: none;
+  padding: 5px;
+  margin: 0 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+button {
+  cursor: pointer;
+}

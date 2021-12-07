@@ -1,0 +1,2 @@
+export const INITIAL_FORM   = "INITIAL_FORM";
+export const FINISH_UPDATE = "FINISH_UPDATE";

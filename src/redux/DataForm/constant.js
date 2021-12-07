@@ -1,0 +1,7 @@
+export const CREATE_NEW_DATA_FORM = "CREATE_NEW_DATA_FORM";
+export const DELETE_DATA_FORM = "DELETE_DATA_FORM";
+export const UPDATE_DATA_FORM = "UPDATE_DATA_FORM";
+export const FETCH_ALL_DATA_FORMS = "FETCH_ALL_DATA_FORMS";
+export const START_LOADING = "START_LOADING";
+export const END_LOADING = "END_LOADING";
+export const ERROR = "ERROR";
