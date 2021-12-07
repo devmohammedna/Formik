@@ -6,7 +6,7 @@ import ReactForm from './components/Form/ReactForm';
 function App() {
   return (
     <div className="App">
-      {/* <DataFormSlice/> */}
+      <DataFormSlice/>
       <ReactForm />
     </div>
   );

@@ -37,8 +37,8 @@ export default function ReactForm() {
     return (
         <div>
            <Formik
-           
-           initialValues={initialValue}
+           enableReinitialize={true}
+           initialValues={isUpdate? dataform : initialValue}
             onSubmit={(values, { resetForm }) => {
         
             isUpdate

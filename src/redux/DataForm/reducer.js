@@ -7,45 +7,45 @@ import { CREATE_NEW_DATA_FORM,
   UPDATE_DATA_FORM,
  } from "./constant";
 
-export default function DataFormReduser( state = { isLoading: false, error: "", dataform: [] }, action) {
+export default function DataFormReduser( initialState = { isLoading: false, error: "", dataform: [] }, action) {
   switch (action.type) {
     case START_LOADING:
       return {
-           ...state,
+           ...initialState,
         isLoading: true,
       };
     case END_LOADING:
-      return { ...state, isLoading: false };
+      return { ...initialState, isLoading: false };
       case ERROR:
-      return { ...state, error: action.payload };
+      return { ...initialState, error: action.payload };
        case FETCH_ALL_DATA_FORMS:
       return {
-        ...state,
-        dataform: [action.payload, ...state.dataform],
+        ...initialState,
+        dataform: [action.payload],
         error: "",
       };
       case CREATE_NEW_DATA_FORM:
       return {
-        ...state,
-        dataform: [action.payload, ...state.dataform],
+        ...initialState,
+        dataform: [action.payload, ...initialState.dataform],
         error: "",
       };
 
     // case DELETE_DATA_FORM:
     //   return {
-    //     ...state,
-    //     dataform: state.dataform.filter(
+    //     ...initialState,
+    //     dataform: initialState.dataform.filter(
     //       (item) => item._id !== action.payload
     //     ),
     //   };
-    //    case UPDATE_DATA_FORM:
-    //   return {
-    //     ...state,
-    //     dataform: state.dataform.map((experiance) =>
-    //       experiance._id === action.payload._id ? action.payload : experiance
-    //     ),
-    //   };
+       case UPDATE_DATA_FORM:
+      return {
+        ...initialState,
+        dataform: initialState.dataform.map((experiance) =>
+          experiance._id === action.payload._id ? action.payload : experiance
+        ),
+      };
     default:
-      return state;
+      return initialState;
   }
 }

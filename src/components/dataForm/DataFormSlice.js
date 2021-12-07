@@ -15,21 +15,21 @@ export default function DataFormSlice() {
 
     return (
         <div className="dataform">
-             {/* {DataFormReduser?.isLoading && (
+             {DataFormReduser?.isLoading && (
         <div className="loading">Loading ...</div>
-      )} */}
-        {/* {DataFormReduser?.error && ( */}
-         {/* <div className="error">  {DataFormReduser.error} </div> */}
-    {/* //   )} */}
+      )}
+        {DataFormReduser?.error && ( 
+          <div className="error">  {DataFormReduser?.error} </div> 
+     )}
 
-         {/* {!DataFormReduser?.error &&
+          {!DataFormReduser?.error &&
         !DataFormReduser?.isLoading &&
-        DataFormReduser?.workExperiances.length === 0 && (
+        DataFormReduser?.dataform.length === 0 && (
           <div className="slice">Empty</div>
-        )} */}
-      {/* {DataFormReduser?.dataform.map((item) => (
-        <DataFormItem itemDetails={item} key={item._id} />
-      ))} */}
+        )} 
+       {DataFormReduser && DataFormReduser?.dataform.map((item,index) => (
+        <DataFormItem itemDetails={item} key={index} />
+      ))} 
         </div>
     )
 }

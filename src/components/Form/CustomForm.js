@@ -16,25 +16,25 @@ export default function CustomForm({errors,touched, values }) {
           name='jopTitle'
           Options={jopOptions}
           placeholder="Job Title"
-          defaultValue={values.jopTitle}
+        
           as={ReactSelectComponent}
         />
         <ReactSelect
           name='jopField'
           Options={jopOptions}
           placeholder="Job Field"
-          defaultValue={values.jopField}
+          
           as={ReactSelectComponent}
         />
         <ReactSelect
           name='jopLocation'
           Options={jopOptions}
           placeholder="Job Location"
-          defaultValue={values.jopLocation}
+         
           as={ReactSelectComponent}
         />
     
-     <div className={values.currentlyWork ?'input-full-width': "box-date"}>
+     <div className={values?.currentlyWork ?'input-full-width': "box-date"}>
         <IuputForm 
           type="date"
           name="startDate"

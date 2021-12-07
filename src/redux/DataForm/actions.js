@@ -9,7 +9,7 @@ import {
 } from "./constant";
 
 // import * as api from "./api";
-// import { FINISH_UPDATE } from "../From/constant";
+import { FINISH_UPDATE } from "../Form/constant";
 
 export const fetchAlldataform = (payload) => async (dispatch) => {
  
@@ -39,8 +39,17 @@ export const createNewdataform=(payload)=>{
 //   }
 //   dispatch({ type: END_LOADING });
 // };
-export const updatedataform = (payload) => {
+export const updatedataform  = (payload) => async (dispatch)=> {
+   try {
+    dispatch({ type: START_LOADING });
+    // checkCurrentlyWork(body);
+    
+    dispatch({ type: UPDATE_DATA_FORM, payload: payload });
+  } catch (error) {
+    dispatch({ type: ERROR, payload: error.message });
+  }
+  dispatch({ type: END_LOADING });
+  dispatch({ type: FINISH_UPDATE });
  
-  // dispatch({ type: END_LOADING });
-  // dispatch({ type: FINISH_UPDATE });
+
 };
